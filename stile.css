@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+/* common*/
+.riga{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.colonna{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cerchio{
+    height: 90%;
+    width: 100%;
+    border-radius: 50%;
+}
+/* ******************** header*************************** */
+header{
+    background-color: black;
+    height: 90vh;
+    width:  15rem;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.buttons button{
+    background-color: black;
+    border: none;
+    color:white;
+}
+.playlist{
+    color: grey;
+    display: flex;
+    flex-direction: column;
+}
+.crea_playlist{
+   
+}
+.recenti .card #img{
+    border-radius: 50%;
+}
+/*************************** main ***********************************/
+main{
+    overflow: scroll;
+    background-color: rgb(37, 37, 37);
+    height: 90vh;
+    width: calc(100% - 15rem);
+    
+}
+#b_up{
+    color: white;
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(13, 13, 13);
+}
+.buttons_main{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttons_main button{
+    background: none;
+    color: white;
+    padding: 1rem;
+}
+
+.recenti{
+    display: flex;
+    flex-direction: column;
+    
+}
+.conteiner_card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+    /* overflow-x: scroll; */
+    scrollbar-color: grey;
+}
+.recenti h1{
+    color: white;
+    padding: 1rem;
+}
+.card{
+    border-style: dashed;
+    height: fit-content;
+    width: 10rem;
+    margin-left: 0.5rem;
+}
+.card img {
+    width: 100%;
+}
+.card h3{
+    color: white;
+}
+.card span{
+    color: grey;
+}
+
+/* footer */
+footer{
+    background-color: rgb(71, 71, 71);
+    height: 8vh;
+    width: 100%;
+}
+
