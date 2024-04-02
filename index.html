@@ -3,28 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/549ef415f6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="stile.css" />
     <title>Spotify</title>
   </head>
   <body class="colonna">
     <div class="riga">
+      <!--- header-------------------------------------->
       <header>
         <div class="logo">
-          <img src="" alt="" />
+          <img src="logo.svg" alt="" />
         </div>
         <div class="buttons">
-          <button>Home</button>
-          <button>cerca</button>
-          <button>La tua libreria</button>
+          <button>
+            <b><i class="fa-solid fa-house"></i> Home</b>
+          </button>
+          <button>
+            <b><i class="fa-solid fa-magnifying-glass"></i> cerca</b>
+          </button>
+          <button>
+            <b><i class="fa-solid fa-bars"></i> La tua libreria</b>
+          </button>
         </div>
         <div class="playlist">
-          <div class="crea_playlist">Crea playlist</div>
+          <div class="crea_playlist">
+            <i class="fa-solid fa-square-plus"></i>
+            <p>-Crea playlist</p>
+          </div>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
+        </div>
+        <div class="container_profilo">
+          <div id="app">
+            <i class="fa-regular fa-circle-down"></i> Installa app
+          </div>
+          <div id="profilo"><i class="fa-regular fa-user"></i> John Doe</div>
         </div>
       </header>
       <main>
@@ -33,12 +53,12 @@
         </div>
         <div class="container">
           <div class="buttons_main">
-            <button>IN EVIDENZA</button>
-            <button>PODCAST</button>
-            <button>CLASSIFICHE</button>
-            <button>GENERI E MOOD</button>
-            <button>NUOVE USCITE</button>
-            <button>SCOPRI</button>
+            <button><b>IN EVIDENZA</b></button>
+            <button><b>PODCAST</b></button>
+            <button><b>CLASSIFICHE</b></button>
+            <button><b>GENERI E MOOD</b></button>
+            <button><b>NUOVE USCITE</b></button>
+            <button><b>SCOPRI</b></button>
           </div>
           <div class="recenti">
             <!-- titolo -->
@@ -48,37 +68,57 @@
               <!-- card 1 -->
               <div class="card">
                 <img src="metal_lifting.jpg" alt="" />
+                <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
                 <h3>Heavy Metal</h3>
                 <span>Subtitle</span>
               </div>
               <!-- card 2 -->
               <div class="card">
-                <img src="metal_lifting.jpg" alt="" />
-                <h3>Heavy Metal</h3>
-                <span>Subtitle</span>
+                <img src="stranger.jpeg" alt="" />
+                 <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
+                <h3>
+                  Stranger Things, Vol.1(a Netflix Original Series Soundtruck)
+                </h3>
+                <span>Kyle Dixon & Micheal Stein</span>
               </div>
               <!-- cadr 3 -->
               <div class="card">
-                <img src="metal_lifting.jpg" alt="" />
-                <h3>Heavy Metal</h3>
+                <img src="aquietplace.jpeg" alt="" />
+                 <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
+                <h3>A quiet placel</h3>
                 <span>Subtitle</span>
               </div>
               <!-- card 4 -->
               <div class="card">
-                <img src="metal_lifting.jpg" alt="" />
-                <h3>Heavy Metal</h3>
+                <img src="split.jpeg" alt="" />
+                 <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
+                <h3>Split</h3>
                 <span>Subtitle</span>
               </div>
               <!-- card 5 -->
               <div class="card">
-                <img src="metal_lifting.jpg" alt="" />
+                <img src="cure.jpeg" alt="" />
+                <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
                 <h3>Heavy Metal</h3>
-                <span>Subtitle</span>
+                <span> A cure for wellness </span>
               </div>
               <!-- card 6 -->
               <div class="card">
-                <img src="metal_lifting.jpg" alt="" />
-                <h3>Heavy Metal</h3>
+                <img src="sinister.jpeg" alt="" />
+                 <div class="play">
+                  <i class="fa-regular fa-circle-play"></i> 
+                </div>
+                <h3>sinister</h3>
                 <span>Subtitle</span>
               </div>
             </div>
@@ -88,10 +128,16 @@
               <div class="conteiner_card">
                 <div class="card">
                   <img src="radar.jpeg" alt="" />
+                  <div class="play">
+                    <i class="fa-regular fa-circle-play"></i> 
+                  </div>
                   <span><b>Realese</b></span>
                 </div>
                 <div class="card">
                   <img src="mixdaily.jpeg" alt="" />
+                  <div class="play">
+                    <i class="fa-regular fa-circle-play"></i> 
+                  </div>
                   <span><b>Realese</b></span>
                 </div>
               </div>
@@ -102,9 +148,17 @@
                 <div class="conteiner_card">
                   <div class="card">
                     <img id="img" src="youg.jpeg" alt="" />
+                    <div class="play">
+                      <i class="fa-regular fa-circle-play"></i> 
+                    </div>
+                    <span><b>Lana Del Rey</b></span>
                   </div>
                   <div class="card">
                     <img id="img" src="einaudi.jpeg" alt="" />
+                    <div class="play">
+                      <i class="fa-regular fa-circle-play"></i> 
+                    </div>
+                    <span><b>Ludovico einaudi</b></span>
                   </div>
                 </div>
               </div>
@@ -113,6 +167,48 @@
         </div>
       </main>
     </div>
-    <footer></footer>
+    <footer>
+      <div class="f1">
+        <div class="container_f1">
+          <div class="img">
+            <img src="sinister.jpeg" alt="" />
+          </div>
+          <div>
+            <p class="white">Sinister</p>
+            <p class="grey">Brano nome</p>
+          </div>
+          <i class="fa-regular fa-heart grey"></i>
+          <i class="fa-regular fa-folder grey"></i>
+        </div>
+      </div>
+      <div class="f2">
+        <div class="container_f2 white gap">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-forward-step ruotato"></i>
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-rotate-right"></i>
+          <img src=" " alt="" />
+        </div>
+        <div class="container_f2">
+          <span><b>0.25</b></span>
+          <div class="song">
+            <div class="hover_song"></div>
+            <div class="song_cerchio"></div>
+          </div>
+          <span><b>4.35</b></span>
+        </div>
+      </div>
+      <div class="f3">
+        <i class="fa-solid fa-list"></i>
+        <i class="fa-solid fa-tv"></i>
+        <i class="fa-solid fa-volume-high"></i>
+        <div class="song song_f3">
+          <div class="hover_song"></div>
+          <div class="song_cerchio"></div>
+        </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

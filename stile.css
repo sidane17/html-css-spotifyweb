@@ -2,13 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+
 }
 body{
     display: flex;
     height: 100vh;
     width: 100%;
 }
+
 /* common*/
+.gap{
+    gap:1rem;
+    font-size: x-large;
+}
+.ruotato{
+    transform: rotate(180deg);}
 .riga{
     width: 100%;
     height: 100%;
@@ -27,6 +36,12 @@ body{
     width: 100%;
     border-radius: 50%;
 }
+.white{
+    color: white;
+}
+.grey{
+    color: grey;
+}
 /* ******************** header*************************** */
 header{
     background-color: black;
@@ -34,30 +49,82 @@ header{
     width:  15rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .logo{
+    margin: 0.5rem;
+    width: 8rem;
     display: flex;
     
 }
 .buttons{
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 .buttons button{
-    background-color: black;
+    padding-left: 1rem;
+    width: fit-content;
+    padding-right: 20%;
+    background-color: rgb(0, 0, 0);
     border: none;
     color:white;
+    border-left: solid;
+    border-left-color:black;
+    margin-bottom: 0.5rem;
+    font-size:medium;
+}
+
+ .buttons button:hover{
+    border-left-color: green;
 }
 .playlist{
+    margin: 1rem;
     color: grey;
     display: flex;
     flex-direction: column;
 }
+.playlist .crea_playlist:hover{
+    color:white;
+}
+.playlist span:hover {
+    color:white;
+}
+.playlist span{
+    margin-bottom: 1rem;
+}
+
 .crea_playlist{
-   
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size:large;
+}
+.crea_playlist i{
+    font-size:xx-large;
 }
 .recenti .card #img{
     border-radius: 50%;
+}
+.container_profilo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    justify-self: baseline;
+    margin-top: 60%;
+}
+#app{
+    
+    border-bottom: solid;
+    border-color: grey;
+    width: 90%;
+    color: grey;
+}
+#profilo{
+    width: 90%;
+    
+    color: grey;
 }
 /*************************** main ***********************************/
 main{
@@ -67,11 +134,21 @@ main{
     width: calc(100% - 15rem);
     
 }
-#b_up{
-    color: white;
-    height: 3rem;
+.upgrade{
     width: 100%;
+    height: 3rem;
     background-color: rgb(13, 13, 13);
+}
+#b_up{
+    float: right;
+    border-radius: 5pc;
+    border:solid;
+    border-color: white;
+    color: white;
+    height: 100%;
+    width: 20%;
+    background-color: rgb(13, 13, 13);
+    
 }
 .buttons_main{
     
@@ -81,18 +158,24 @@ main{
     justify-content: center;
     align-items: center;
 }
+.buttons_main button:hover{
+    color:white;
+}
 .buttons_main button{
     background: none;
-    color: white;
+    color: grey;
     padding: 1rem;
+    border: none;
 }
 
 .recenti{
     display: flex;
     flex-direction: column;
+    flex-shrink: unset;
     
 }
 .conteiner_card{
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -101,29 +184,171 @@ main{
     scrollbar-color: grey;
 }
 .recenti h1{
+    margin-top: 1rem;
     color: white;
-    padding: 1rem;
+    padding-left: 1rem;
+}
+.recenti span{
+    color: grey;
+    padding-left: 1rem;
 }
 .card{
-    border-style: dashed;
+    position: relative;
     height: fit-content;
     width: 10rem;
     margin-left: 0.5rem;
 }
+.card:hover img{
+
+    opacity: 0.3;
+}
+.play{
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    color: white;
+    font-size: 3rem;
+    display: none;
+}
+.card:hover .play{
+    opacity: 1;
+   display: inline;
+}
+
+
 .card img {
     width: 100%;
+    z-index: 0;
 }
 .card h3{
     color: white;
 }
 .card span{
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 /* footer */
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(71, 71, 71);
-    height: 8vh;
+    height: 10.2vh;
     width: 100%;
 }
+.f1{
+    display: flex;
+    justify-self: start;
+    height: 90%;
+    width: 20%;
+    margin-left: 1rem;
+}
+.img{
+    height: 100%;
+    
+    width: 4rem;
+    
+    margin-right: 0.5rem;
+}
+.img img {
+    width: 100%;
+}
+.container_f1{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    
+    height: fit-content;
+    width: 100%;
+}
+.container_f1 div{
+    margin-right:2rem
+}
+.container_f1 i{
+   margin-left: 0.5rem;
+}
+.container_f1 i:hover{
+    color: white;
+}
+.container_f1 p:hover{
+    text-decoration: underline;
+}
+.f2{
+    justify-self: center;
+    height: 90%;
+    width: 40%;
+    
+}
+.container_f2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    height: calc(100%/2);
+    width: 100%;
+}
+.container_f2 span{
+    font-size: small;
+    color:  white;
+}
+
+.song{
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 10px;
+    width: 80%;
+    border: solid;
+    color: rgb(122, 122, 122);
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container_f2 i:hover{
+    font-size: 1.7rem;
+    /* transition: 0.5s; */
+}
+.hover_song{
+    border-radius: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    width: 30%;
+    border:solid;
+    color: rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255) ;
+    height: 100%;
+    display: flex;
+}
+.song:hover .hover_song{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(65, 255, 65);
+    background-color: rgb(65, 255, 65);
+}
+.song:hover .song_cerchio{
+    
+    height: 15px;
+    width: 15px;
+    background-color: rgb(147, 147, 147);
+    border-radius: 50%;
+}
+.f3{
+    color: white;
+    justify-self:end;
+    width: 20%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    justify-self:end;
+    
+}
+.song_f3{
+    height: 8px;
+}
+
 
