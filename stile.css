@@ -12,6 +12,19 @@ body{
 }
 
 /* common*/
+.hr{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
+}
+hr{
+    border: 1px solid green;
+    width: 50%;
+    margin-left: 25%;
+    
+}
 .gap{
     gap:1rem;
     font-size: x-large;
@@ -23,11 +36,12 @@ body{
     height: 100%;
     display: flex;
     flex-direction: row;
+    
 }
 .colonna{
     
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
 }
@@ -44,12 +58,23 @@ body{
 }
 /* ******************** header*************************** */
 header{
+    position: relative;
     background-color: black;
-    height: 90vh;
-    width:  15rem;
+    height: calc(100vh - 5rem);
+    width:  13rem;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
+    justify-content: space-between;
+}
+.conteiner_header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    scrollbar-width: none;
+    
 }
 .logo{
     margin: 0.5rem;
@@ -68,21 +93,28 @@ header{
     padding-right: 20%;
     background-color: rgb(0, 0, 0);
     border: none;
-    color:white;
+    color:grey;
     border-left: solid;
     border-left-color:black;
     margin-bottom: 0.5rem;
     font-size:medium;
 }
+.buttons button:first-child{
+    color: white;
+    border-left-color: green;
+}
 
  .buttons button:hover{
-    border-left-color: green;
+    color: white;
 }
 .playlist{
     margin: 1rem;
     color: grey;
     display: flex;
     flex-direction: column;
+    height: fit-content;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 .playlist .crea_playlist:hover{
     color:white;
@@ -99,6 +131,8 @@ header{
     display: flex;
     align-items: center;
     font-size:large;
+    gap: 0.2rem;
+    
 }
 .crea_playlist i{
     font-size:xx-large;
@@ -110,9 +144,15 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0.5rem;
-    justify-self: baseline;
-    margin-top: 60%;
+   
+   
+    width: 80%;
+    
+}
+#app:hover {
+    color: white;
 }
 #app{
     
@@ -122,33 +162,62 @@ header{
     color: grey;
 }
 #profilo{
+    gap: 5px;
+    display: flex;
+    align-self: center;
     width: 90%;
     
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 /*************************** main ***********************************/
 main{
-    overflow: scroll;
+    overflow-y: scroll;
+    scrollbar-width: none;
     background-color: rgb(37, 37, 37);
-    height: 90vh;
-    width: calc(100% - 15rem);
+    height:calc(100vh - 5rem);
+    width: 100%;
+}
+#upgrade{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(13, 13, 13);
     
 }
-.upgrade{
-    width: 100%;
-    height: 3rem;
-    background-color: rgb(13, 13, 13);
+.kill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: rgb(52, 52, 52);
+    
+
+}
+.upgrade:hover .upgrade{
+    background-color: antiquewhite;
+ display: none;
 }
 #b_up{
-    float: right;
-    border-radius: 5pc;
+    border-radius: 50px;
     border:solid;
     border-color: white;
     color: white;
-    height: 100%;
-    width: 20%;
+    height: 70%;
+    
     background-color: rgb(13, 13, 13);
     
+}
+#b_up:hover{
+    height: 80%;
+    /* transition: 0.5s; */
 }
 .buttons_main{
     
@@ -157,6 +226,7 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .buttons_main button:hover{
     color:white;
@@ -171,7 +241,7 @@ main{
 .recenti{
     display: flex;
     flex-direction: column;
-    flex-shrink: unset;
+    
     
 }
 .conteiner_card{
@@ -195,7 +265,7 @@ main{
 .card{
     position: relative;
     height: fit-content;
-    width: 10rem;
+    max-width: calc(100%/6);
     margin-left: 0.5rem;
 }
 .card:hover img{
@@ -204,12 +274,13 @@ main{
 }
 .play{
     position: absolute;
-    top: 25%;
-    left: 36%;
+    top: 5rem;
+    left: 5rem;
     color: white;
     font-size: 3rem;
     display: none;
 }
+
 .card:hover .play{
     opacity: 1;
    display: inline;
@@ -233,12 +304,15 @@ footer{
     align-items: center;
     justify-content: space-between;
     background-color: rgb(71, 71, 71);
-    height: 10.2vh;
+    min-height: 5rem;
     width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
 }
 .f1{
     display: flex;
     justify-self: start;
+    align-items: center;
     height: 90%;
     width: 20%;
     margin-left: 1rem;
@@ -257,7 +331,6 @@ footer{
     display:flex;
     flex-direction:row;
     align-items: center;
-    
     height: fit-content;
     width: 100%;
 }
@@ -298,7 +371,7 @@ footer{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     height: 10px;
-    width: 80%;
+    width: 70%;
     border: solid;
     color: rgb(122, 122, 122);
     overflow: visible;
@@ -350,5 +423,99 @@ footer{
 .song_f3{
     height: 8px;
 }
+/* MEDIA QUERY */
+@media screen and (max-width:768px) {
+  .conteiner_card {
+    flex-wrap: wrap;
+  }
+  .card{
+  min-width: 10rem;
+  }
+  .recenti:first-child{
+    align-items: center;
+    justify-content: center;
+}
+.container_profilo{
+    font-size: small;
+}
+.song_f3{
+    display: none;
+}
+footer img{
+    display: none;
+}
+.container_f1{
+    justify-content: right;
+}
+.f1{
+    margin-left:7% ;
+    justify-content: left;
+    width: 15%;
+    font-size: 60%;
+    }
+
+}
+/***************************************************************** */
+@media screen and (max-width:480px){
+    header{
+        
+        width: 3rem;
+    }
+    header button b{
+        display: none;
+    }
+    header .playlist{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .recenti{
+        align-items: center;
+    }
+    .conteiner_card{
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .card{
+        min-width: 15rem;
+      }
+      .container_profilo{
+        display: flex;
+        width: 20%;
+        font-size: small;
+        justify-content: center;
+        align-items: center;
+      }
+      .container_profilo b{
+        display: none;
+      }
+      .f1{
+        width: 15%;
+        font-size: 60%;
+        }
+        .container_f1 i{
+            margin-left: 0.1rem;
+        }
+        #contrai{
+            width: 1rem;
+        }
+        .f3{
+            flex-direction: column-reverse;
+             font-size: xx-small;
+             height: 100%;
+        }
+        .song_f3{
+            display: none;
+        }
+        .container_f1{
+            align-items: center;
+            float: left;
+        }
+        .container_f1 img{
+            display: none;
+        }
+      }
 
 

@@ -14,24 +14,33 @@
     <div class="riga">
       <!--- header-------------------------------------->
       <header>
+        <div >
+        <!-- logo -->
         <div class="logo">
           <img src="logo.svg" alt="" />
         </div>
+        
+        <!-- container bottoni -->
         <div class="buttons">
+          <!-- casa -->
           <button>
-            <b><i class="fa-solid fa-house"></i> Home</b>
+            <i class="fa-solid fa-house"><b></i> Home</b>
           </button>
+          <!-- cerca -->
           <button>
-            <b><i class="fa-solid fa-magnifying-glass"></i> cerca</b>
+            <i class="fa-solid fa-magnifying-glass"></i><b>cerca</b>
           </button>
+          <!-- libreria -->
           <button>
-            <b><i class="fa-solid fa-bars"></i> La tua libreria</b>
+            <i class="fa-solid fa-bars"></i><b> Libreria</b>
           </button>
         </div>
+        <!-- playlist -->
         <div class="playlist">
-          <div class="crea_playlist">
+          <!-- crea playlist -->
+          <div class="crea_playlist ">
             <i class="fa-solid fa-square-plus"></i>
-            <p>-Crea playlist</p>
+            <p>  Crea playlist</p>
           </div>
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
@@ -40,20 +49,31 @@
           <span>Nome Playlist</span>
           <span>Nome Playlist</span>
         </div>
+      </div>
+        <!-- container profilo -->
         <div class="container_profilo">
           <div id="app">
-            <i class="fa-regular fa-circle-down"></i> Installa app
+            <i class="fa-regular fa-circle-down"></i> <b>Installa app</b>
           </div>
-          <div id="profilo"><i class="fa-regular fa-user"></i> John Doe</div>
+          <div id="profilo"><i class="fa-regular fa-user"></i> <b>John Doe</b></div>
         </div>
       </header>
+
+      <!-- main -->
       <main>
-        <div class="upgrade">
+        <div id="upgrade">
+          <button class="kill" onclick="hide()"><i class="fa-solid fa-x"></i></button>
+          <script>
+            function hide(){
+              var x= document.getElementById("upgrade");
+                x.style.display="none";
+            }
+          </script>
           <button id="b_up">EFFETTUA L'UPGRADE</button>
         </div>
         <div class="container">
           <div class="buttons_main">
-            <button><b>IN EVIDENZA</b></button>
+            <button ><b>IN EVIDENZA</b><div id="hr"><hr></div></button>
             <button><b>PODCAST</b></button>
             <button><b>CLASSIFICHE</b></button>
             <button><b>GENERI E MOOD</b></button>
@@ -74,24 +94,26 @@
                 <h3>Heavy Metal</h3>
                 <span>Subtitle</span>
               </div>
-              <!-- card 2 -->
+              
+              <!-- card 2-->
+                
               <div class="card">
                 <img src="stranger.jpeg" alt="" />
-                 <div class="play">
+                 <div class="play" >
                   <i class="fa-regular fa-circle-play"></i> 
                 </div>
                 <h3>
-                  Stranger Things, Vol.1(a Netflix Original Series Soundtruck)
+                  <!-- Stranger Things, Vol.1(a Netflix Original Series Soundtruck) -->
                 </h3>
                 <span>Kyle Dixon & Micheal Stein</span>
-              </div>
+              </div> 
               <!-- cadr 3 -->
               <div class="card">
                 <img src="aquietplace.jpeg" alt="" />
                  <div class="play">
                   <i class="fa-regular fa-circle-play"></i> 
                 </div>
-                <h3>A quiet placel</h3>
+                <h3>A quiet place</h3>
                 <span>Subtitle</span>
               </div>
               <!-- card 4 -->
@@ -158,7 +180,7 @@
                     <div class="play">
                       <i class="fa-regular fa-circle-play"></i> 
                     </div>
-                    <span><b>Ludovico einaudi</b></span>
+                    <span><b>Ludovico Einaudi</b></span>
                   </div>
                 </div>
               </div>
@@ -173,7 +195,7 @@
           <div class="img">
             <img src="sinister.jpeg" alt="" />
           </div>
-          <div>
+          <div id="contrai">
             <p class="white">Sinister</p>
             <p class="grey">Brano nome</p>
           </div>
