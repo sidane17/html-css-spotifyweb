@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
 }
+
 body{
     display: flex;
     height: 100vh;
@@ -19,18 +19,23 @@ body{
     width: 100%;
     
 }
+
 hr{
     border: 1px solid green;
     width: 50%;
     margin-left: 25%;
     
 }
+
 .gap{
     gap:1rem;
     font-size: x-large;
 }
+
 .ruotato{
-    transform: rotate(180deg);}
+    transform: rotate(180deg);
+}
+
 .riga{
     width: 100%;
     height: 100%;
@@ -38,6 +43,7 @@ hr{
     flex-direction: row;
     
 }
+
 .colonna{
     
     width: 100%;
@@ -45,20 +51,23 @@ hr{
     display: flex;
     flex-direction: column;
 }
+
 .cerchio{
     height: 90%;
     width: 100%;
     border-radius: 50%;
 }
+
 .white{
     color: white;
 }
+
 .grey{
     color: grey;
 }
+
 /* ******************** header*************************** */
 header{
-    position: relative;
     background-color: black;
     height: calc(100vh - 5rem);
     width:  13rem;
@@ -68,6 +77,7 @@ header{
     scrollbar-width: none;
     justify-content: space-between;
 }
+
 .conteiner_header{
     height: 100%;
     display: flex;
@@ -76,17 +86,28 @@ header{
     scrollbar-width: none;
     
 }
+
+/* prima parte logo */
+
 .logo{
     margin: 0.5rem;
     width: 8rem;
     display: flex;
     
 }
+
+#mini_logo{
+    display: none;
+}
+
+/* seconda parte con i bottoni */
+
 .buttons{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
+
 .buttons button{
     padding-left: 1rem;
     width: fit-content;
@@ -99,6 +120,7 @@ header{
     margin-bottom: 0.5rem;
     font-size:medium;
 }
+
 .buttons button:first-child{
     color: white;
     border-left-color: green;
@@ -107,6 +129,9 @@ header{
  .buttons button:hover{
     color: white;
 }
+
+/* terza parte con la playlist */
+
 .playlist{
     margin: 1rem;
     color: grey;
@@ -116,12 +141,15 @@ header{
     overflow: scroll;
     scrollbar-width: none;
 }
+
 .playlist .crea_playlist:hover{
     color:white;
 }
+
 .playlist span:hover {
     color:white;
 }
+
 .playlist span{
     margin-bottom: 1rem;
 }
@@ -134,28 +162,27 @@ header{
     gap: 0.2rem;
     
 }
+
 .crea_playlist i{
     font-size:xx-large;
 }
-.recenti .card #img{
-    border-radius: 50%;
-}
+
+/* quarta parte  */
+
 .container_profilo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
-   
-   
     width: 80%;
-    
 }
+
 #app:hover {
     color: white;
 }
+
 #app{
-    
     border-bottom: solid;
     border-color: grey;
     width: 90%;
@@ -169,7 +196,11 @@ header{
     
     color: rgb(255, 255, 255);
 }
+
+
 /*************************** main ***********************************/
+
+
 main{
     overflow-y: scroll;
     scrollbar-width: none;
@@ -177,6 +208,9 @@ main{
     height:calc(100vh - 5rem);
     width: 100%;
 }
+
+/* Upgrade eliminabile */
+
 #upgrade{
     position: relative;
     display: flex;
@@ -185,8 +219,8 @@ main{
     width: 100%;
     height: 5rem;
     background-color: rgb(13, 13, 13);
-    
 }
+
 .kill{
     display: flex;
     align-items: center;
@@ -198,13 +232,13 @@ main{
     height: 1.5rem;
     width: 1.5rem;
     background-color: rgb(52, 52, 52);
-    
-
 }
+
 .upgrade:hover .upgrade{
     background-color: antiquewhite;
  display: none;
 }
+
 #b_up{
     border-radius: 50px;
     border:solid;
@@ -215,12 +249,14 @@ main{
     background-color: rgb(13, 13, 13);
     
 }
+
 #b_up:hover{
     height: 80%;
-    /* transition: 0.5s; */
 }
+
+/* seconda sezione con i bottoni */
+
 .buttons_main{
-    
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -228,9 +264,11 @@ main{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .buttons_main button:hover{
     color:white;
 }
+
 .buttons_main button{
     background: none;
     color: grey;
@@ -238,40 +276,51 @@ main{
     border: none;
 }
 
+/* sezione musica */
+
 .recenti{
     display: flex;
     flex-direction: column;
-    
-    
 }
+
+.recenti .card #img{
+    border-radius: 50%;
+}
+
 .conteiner_card{
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
-   
-    /* overflow-x: scroll; */
     scrollbar-color: grey;
 }
+
 .recenti h1{
     margin-top: 1rem;
     color: white;
     padding-left: 1rem;
 }
+
 .recenti span{
     color: grey;
     padding-left: 1rem;
 }
+
+/* sezione card */
+
 .card{
     position: relative;
     height: fit-content;
     max-width: calc(100%/6);
     margin-left: 0.5rem;
 }
-.card:hover img{
 
+.card:hover img{
     opacity: 0.3;
 }
+
+/* hover card */
+
 .play{
     position: absolute;
     top: 5rem;
@@ -286,7 +335,6 @@ main{
    display: inline;
 }
 
-
 .card img {
     width: 100%;
     z-index: 0;
@@ -299,6 +347,7 @@ main{
 }
 
 /* footer */
+
 footer{
     display: flex;
     align-items: center;
@@ -309,6 +358,8 @@ footer{
     overflow: hidden;
     scrollbar-width: none;
 }
+
+/* prima parte footer */
 .f1{
     display: flex;
     justify-self: start;
@@ -317,6 +368,7 @@ footer{
     width: 20%;
     margin-left: 1rem;
 }
+
 .img{
     height: 100%;
     
@@ -324,9 +376,11 @@ footer{
     
     margin-right: 0.5rem;
 }
+
 .img img {
     width: 100%;
 }
+
 .container_f1{
     display:flex;
     flex-direction:row;
@@ -334,24 +388,31 @@ footer{
     height: fit-content;
     width: 100%;
 }
+
 .container_f1 div{
     margin-right:2rem
 }
+
 .container_f1 i{
    margin-left: 0.5rem;
 }
+
 .container_f1 i:hover{
     color: white;
 }
+
 .container_f1 p:hover{
     text-decoration: underline;
 }
+
+/* seconda sezione footer */
+
 .f2{
     justify-self: center;
     height: 90%;
     width: 40%;
-    
 }
+
 .container_f2{
     display: flex;
     flex-direction: row;
@@ -361,6 +422,7 @@ footer{
     height: calc(100%/2);
     width: 100%;
 }
+
 .container_f2 span{
     font-size: small;
     color:  white;
@@ -379,10 +441,11 @@ footer{
     flex-direction: row;
     align-items: center;
 }
+
 .container_f2 i:hover{
     font-size: 1.7rem;
-    /* transition: 0.5s; */
 }
+
 .hover_song{
     border-radius: 20px;
     margin-top: 0;
@@ -394,19 +457,21 @@ footer{
     height: 100%;
     display: flex;
 }
+
 .song:hover .hover_song{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: rgb(65, 255, 65);
     background-color: rgb(65, 255, 65);
 }
+
 .song:hover .song_cerchio{
-    
     height: 15px;
     width: 15px;
     background-color: rgb(147, 147, 147);
     border-radius: 50%;
 }
+
 .f3{
     color: white;
     justify-self:end;
@@ -418,12 +483,14 @@ footer{
     justify-content: center;
     gap: 0.5rem;
     justify-self:end;
-    
 }
+
 .song_f3{
     height: 8px;
 }
-/* MEDIA QUERY */
+
+/********************** MEDIA QUERY *************************/
+
 @media screen and (max-width:768px) {
   .conteiner_card {
     flex-wrap: wrap;
@@ -458,16 +525,14 @@ footer img{
 /***************************************************************** */
 @media screen and (max-width:480px){
     header{
-        
+        padding-right:0.5rem ;
         width: 3rem;
     }
     header button b{
         display: none;
+       
     }
     header .playlist{
-        display: none;
-    }
-    .logo{
         display: none;
     }
     .recenti{
@@ -482,12 +547,20 @@ footer img{
         min-width: 15rem;
       }
       .container_profilo{
+        text-align: center;
         display: flex;
-        width: 20%;
-        font-size: small;
+        width: 55%;
+        font-size: medium;
         justify-content: center;
         align-items: center;
-      }
+        padding-left: 0.5rem;
+    }
+    #app{
+        padding-bottom: 0.5rem;
+    }
+    #profilo{
+        padding-top: 0.5rem;
+    }
       .container_profilo b{
         display: none;
       }
@@ -515,6 +588,15 @@ footer img{
         }
         .container_f1 img{
             display: none;
+        }
+        #logo{
+            display: none;
+        }
+        #mini_logo{
+            display: block;
+            height: 1.5rem;
+            padding-left: 0.2rem;
+            
         }
       }
 
